@@ -4,17 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Cat Energy</title>
-    <link rel="stylesheet" href="sass/style.scss" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page-body">
     <header class="page-header">
       <a class="page-header__logo" href="#">
-        <img
-          src="img/logo-mobyle.svg"
-          alt="Логотип Кэт Энерджи"
-          width="33.32"
-          height="37.61"
-        />
+        <picture>
+          <source
+            srcset="/source/img/desktop/logo-desktop.svg"
+            media="(min-width: 1380px)"
+          />
+          <source
+            srcset="/source/img/tablet/logo-tablet.svg"
+            media="(min-width: 768px)"
+          />
+          <img
+            srcset="/source/img/mobile/logo-mobile.svg"
+            alt="Логотип Кэт Энерджи"
+          />
+        </picture>
       </a>
       <nav class="main-nav">
         <button class="main-nav__toogle" type="button">
