@@ -4,8 +4,8 @@ const sourcemap = require("gulp-sourcemaps");
 const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const csso = require("csso");
-const rename = require("rename");
+const csso = require("gulp-csso");
+const rename = require("gulp-rename");
 const sync = require("browser-sync").create();
 
 // Styles
