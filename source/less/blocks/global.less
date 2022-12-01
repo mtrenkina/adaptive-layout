@@ -25,48 +25,41 @@ img {
   overflow: hidden;
 }
 
-.page {
-  height: 100%;
-  .mxn-font-style();
-}
-
-.page__body {
-  min-height: 100%;
-  background-color: @white;
-  width: @mobile-width - 40px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  @media (min-width: @tablet-width) {
-    width: 708px;
-    padding: 0 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1220px;
-    padding: 0 60px;
-  }
-}
-
 .wrapper {
   display: flex;
   min-height: 100%;
-  overflow: hidden;
   flex-direction: column;
 }
 
+.wrapper--little {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .container {
-  width: @mobile-width - 40px;
+  box-sizing: border-box;
   margin: 0 auto;
+  width: @mobile-width;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.container--paddings {
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width - 60px;
     padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width - 120px;
-    padding: 0 60px;
+    padding: 0 110px;
   }
 }

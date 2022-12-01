@@ -3,8 +3,18 @@
   box-sizing: border-box;
   border: none;
   padding: 10px;
+  width: 280px;
+  height: 40px;
+  background-color: @basic_green;
 
   .mxn-font-style(@baseFontSize; @baseLineHeight; @white);
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    height: 54px;
+    padding: 15px 25px;
+    .mxn-font-style(20px; @baseLineHeight-tablet; @white);
+  }
 
   text-align: center;
   text-transform: uppercase;

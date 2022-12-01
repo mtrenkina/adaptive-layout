@@ -16,24 +16,53 @@
       as="font"
       crossorigin="anonymous"
     />
+    <link
+      rel="preload"
+      href="/fonts/Oswald-SemiBold.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Oswald-SemiBold.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/css/styles.min.css" />
   </head>
-  <body class="page-body">
-    <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <picture>
-          <source
-            srcset="/img/desktop/logo-desktop.svg"
-            media="(min-width: 1380px)"
+
+  <body class="page-body container wrapper">
+    <header class="page-header container--paddings">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <a class="page-header__logo" href="#">
+          <picture>
+            <source
+              srcset="/img/desktop/logo-desktop.svg"
+              media="(min-width: 1380px)"
+              width="202"
+              height="59"
+            />
+            <source
+              srcset="/img/tablet/logo-tablet.svg"
+              media="(min-width: 768px)"
+              width="174"
+              height="51.68"
+            />
+            <img
+              srcset="/img/mobile/logo-mobile.svg"
+              alt="Логотип Кэт Энерджи"
+              width="33.32"
+              height="37.61"
+            />
+          </picture>
+          <img
+            class="page-header__logo-mobile"
+            srcset="/img/mobile/logo-mobile-2.svg"
+            alt="Мы в Инстаграме"
+            width="101"
+            height="18"
           />
-          <source
-            srcset="/img/tablet/logo-tablet.svg"
-            media="(min-width: 768px)"
-          />
-          <img srcset="/img/mobile/logo-mobile.svg" alt="Логотип Кэт Энерджи" />
-        </picture>
-      </a>
-      <nav class="main-nav">
+        </a>
         <button class="main-nav__toogle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -53,18 +82,51 @@
       </nav>
     </header>
 
-    <main class="page-main">
+    <main class="page-main wrapper--little">
       <section class="promo">
-        <h1 class="promo__heading">Функциональное питание для котов</h1>
-        <p class="promo__text">Занялся собой? Займись котом!</p>
+        <div class="promo__wrapper">
+          <h1 class="promo__heading">Функциональное питание для котов</h1>
+          <p class="promo__text">Занялся собой? Займись котом!</p>
+        </div>
+
+        <picture class="promo__picture">
+          <!--
+         <source type="image/webp" media="(min-width: 1300px)"
+            srcset="img/content/index-can-desktop@1x.webp 1x, img/content/index-can-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/content/index-can-tablet@1x.webp 1x, img/content/index-can-tablet@2x.webp 2x">
+          <source type="image/webp"
+            srcset="img/content/index-can-mobile@1x.webp 1x, img/content/index-can-mobile@2x.webp 2x">
+          -->
+          <source
+            media="(min-width: 1380px)"
+            srcset="
+              ../../img/desktop/index-can@1x.png 1x,
+              ../../img/desktop/index-can@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ../../img/tablet/index-can-tablet@1x.png 1x,
+              ../../img/tablet/index-can-tablet@2x.png 2x
+            "
+          />
+          <img
+            class="promo__image"
+            src="../../img/mobile/index-can-mobile@1x.png"
+            srcset="../../img/mobile/index-can-mobile@2x.png 2x"
+            alt="Корм для котов Cat Energy Pro"
+          />
+        </picture>
         <a class="button" href="form.html"> Подобрать программу </a>
       </section>
 
-      <section class="programs">
+      <section class="programs container--paddings">
         <article class="programs__type">
           <div class="programs__img programs__img--slim"></div>
           <h3 class="programs__heading">Похудение</h3>
-          <p>
+          <p class="programs__text">
             Ваш кот весит больше собаки и почти утратил способность лазать по
             деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
             сбросить лишний вес.
@@ -74,15 +136,15 @@
         <article class="programs__type">
           <div class="programs__img programs__img--pro"></div>
           <h3 class="programs__heading">Набор массы</h3>
-          <p>
+          <p class="programs__text">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat
             Energy Pro поможет вашему коту нарастить необходимые мышцы!
-            <a class="programs__link" href="catalog.html">Каталог Pro</a>
           </p>
+          <a class="programs__link" href="catalog.html">Каталог Pro</a>
         </article>
       </section>
 
-      <section class="features">
+      <section class="features container--paddings">
         <h2 class="features__heading">Как это работает</h2>
         <ol class="features__list">
           <li class="features__item features__item--first">
@@ -137,7 +199,7 @@
     </main>
 
     <footer class="page-footer">
-      <!--
+      <!-- class="map"
       Here is gonna be map block
       -->
       <a class="page-footer__logo footer-logo" href="#">
@@ -195,5 +257,6 @@
         </a>
       </div>
     </footer>
+    <script src="/js/index.js"></script>
   </body>
 </html>
