@@ -159,8 +159,7 @@
             Замените один-два приема обычной еды на наше функциональное питание.
           </li>
           <li class="features__item features__item--fourth">
-            Уже через месяц наслаждайтесь изменениями к лучшему
-            вашего&nbsp;питомца!
+            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
           </li>
         </ol>
       </section>
@@ -172,36 +171,80 @@
           Cat Energy Slim. Отличный результат без изнуряющих тренировок! При
           этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
         </p>
-        <div class="example__effect-wrapper">
-          <dl class="example__effect-list effect-list">
-            <div class="effect-list__item">
-              <dt class="effect-list__term">
-                <span class="effect-list__term-text">Снижение веса</span>
-              </dt>
-              <dd class="effect-list__definition">5 кг</dd>
+        <dl class="example__effect-list effect-list">
+          <div class="effect-list__item">
+            <dt class="effect-list__term">Снижение веса</dt>
+            <dd class="effect-list__definition">5 кг</dd>
+          </div>
+          <div class="effect-list__item">
+            <dt class="effect-list__term">Затрачено времени</dt>
+            <dd class="effect-list__definition">60 дней</dd>
+          </div>
+        </dl>
+        <p class="example__effect-charges">
+          Затраты на питание: <span>15 000 руб.</span>
+        </p>
+        <div class="example__slider slider">
+          <div class="slider__images">
+            <div class="slider__image-wrapper slider__image-wrapper--before">
+              <picture class="slider__picture">
+                <!--<source type="image/webp" media="(min-width: 1300px)"
+                srcset="img/content/before-desktop@1x.webp 1x, img/content/before-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/content/before-tablet@1x.webp 1x, img/content/before-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/content/before-mobile@1x.webp 1x, img/content/before-mobile@2x.webp 2x">
+              <source media="(min-width: 1300px)"
+                srcset="img/content/before-desktop@1x.png 1x, img/content/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/content/before-tablet@1x.png 1x, img/content/before-tablet@2x.png 2x">-->
+                <img
+                  class="slider__image"
+                  src="../../img/mobile/before-mobile@1x.png"
+                  srcset="../../img/mobile/before-mobile@2x.png 2x"
+                  alt="Корм для котов Cat Energy Pro"
+                />
+              </picture>
             </div>
-            <div class="effect-list__item">
-              <dt class="effect-list__term">
-                <span class="effect-list__term-text">Затрачено времени</span>
-              </dt>
-              <dd class="effect-list__definition">60 дней</dd>
+            <div class="slider__image-wrapper slider__image-wrapper--after">
+              <picture class="slider__picture">
+                <!--<source type="image/webp" media="(min-width: 1300px)"
+                srcset="img/content/after-desktop@1x.webp 1x, img/content/after-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/content/after-tablet@1x.webp 1x, img/content/after-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/content/after-mobile@1x.webp 1x, img/content/after-mobile@2x.webp 2x">
+              <source media="(min-width: 1300px)"
+                srcset="img/content/after-desktop@1x.png 1x, img/content/after-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/content/after-tablet@1x.png 1x, img/content/after-tablet@2x.png 2x">-->
+                <img
+                  class="slider__image"
+                  src="../../img/mobile/after-mobile@1x.png"
+                  srcset="../../img/mobile/after-mobile@2x.png 2x"
+                  alt="Корм для котов Cat Energy Pro"
+                />
+              </picture>
             </div>
-          </dl>
-
-          <p class="example__effect-charges">
-            Затраты на питание:&#32;<span>15 000 руб.</span>
-          </p>
+          </div>
+          <div class="slider__controls">
+            <button class="slider__button" type="button">
+              <span class="slider__button-text">Было</span>
+            </button>
+            <input
+              class="slider__range"
+              type="range"
+              min="0"
+              max="100"
+              aria-label="Сравнить"
+            />
+            <button class="slider__button" type="button">
+              <span class="slider__button-text">Стало</span>
+            </button>
+          </div>
         </div>
-        <!--
-        Here is gonna be cat transformftion block
-        -->
       </section>
     </main>
 
     <footer class="page-footer">
-      <!-- class="map"
-      Here is gonna be map block
-      -->
+      <section class="map"></section>
       <a class="page-footer__logo footer-logo" href="#">
         <img
           class="page-footer__image"

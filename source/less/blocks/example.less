@@ -1,0 +1,41 @@
+.example {
+  width: 100%;
+  display: grid;
+  gap: 30px;
+  background-color: @background-grey;
+  padding: 30px 20px;
+
+  &__heading {
+    .mxn-font-style(36px; 40px; @black);
+
+    @media (min-width: @tablet-width) {
+      .mxn-font-style(60px; 60px; @black);
+      padding-bottom: 75px;
+    }
+
+    @media (min-width: @desktop-width) {
+      .mxn-font-style(60px; 60px; @black);
+    }
+  }
+
+  &__description {
+    .mxn-font-style(14px; 18px);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 10px;
+
+    @media (min-width: @tablet-width) {
+      .mxn-font-style(16px; 24px);
+    }
+  }
+
+  &__effect-charges {
+    .mxn-font-style(14px; 20px; @black);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__slider {
+    display: block;
+    width: 100%;
+  }
+}

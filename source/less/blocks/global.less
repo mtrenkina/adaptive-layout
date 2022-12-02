@@ -36,6 +36,14 @@ img {
   min-height: 100%;
   flex-direction: column;
   gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 80px;
+  }
 }
 
 .container {

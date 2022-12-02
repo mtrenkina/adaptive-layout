@@ -5,7 +5,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
+    column-gap: 80px;
   }
 
   &__type {
@@ -25,6 +25,7 @@
     @media (min-width: @desktop-width) {
       padding: 40px 50px 60px 50px;
       grid-template-columns: 1fr 3fr;
+      align-items: center;
     }
   }
 
@@ -48,6 +49,7 @@
     @media (min-width: @desktop-width) {
       grid-row-start: 1;
       grid-column-start: 1;
+      grid-row: ~"1 / 3";
       width: 100px;
       height: 106px;
       background-size: 100% 100%;
@@ -72,6 +74,7 @@
 
       @media (min-width: @desktop-width) {
         width: 134px;
+        margin-left: -25px;
       }
     }
   }
@@ -87,9 +90,10 @@
     }
 
     @media (min-width: @desktop-width) {
-      grid-row-start: 1;
       grid-column-start: 2;
+      grid-row: ~"1 / 3";
       .mxn-font-style(36px; 36px; @black);
+      padding-left: 30px;
     }
   }
 
@@ -110,9 +114,9 @@
     }
 
     @media (min-width: @desktop-width) {
-      grid-row-start: 2;
+      grid-row-start: 3;
       grid-column-start: 1;
-      grid-column: ~"1 / 2";
+      grid-column: ~"1 / 3";
     }
   }
 
@@ -126,8 +130,20 @@
     grid-column: ~"1 / 3";
     padding: 20px 20px 0 0;
 
-    @media (max-width: @mobile-width-max) {
-      &::before {
+    @media (min-width: @tablet-width) {
+      .mxn-font-style(20px; 30px; @black);
+      padding-top: 55px;
+    }
+
+    @media (min-width: @desktop-width) {
+      .mxn-font-style(20px; 30px; @black);
+      grid-row-start: 4;
+      grid-column: ~"1 / 3";
+      padding-top: 20px;
+    }
+
+    &::before {
+      @media (max-width: @mobile-width-max) {
         content: "";
         position: absolute;
         width: 240px;
@@ -136,13 +152,25 @@
         background-color: @grey-border;
       }
     }
-    @media (min-width: @tablet-width) {
-      .mxn-font-style(20px; 30px; @black);
-      padding-top: 55px;
-    }
 
-    @media (min-width: @desktop-width) {
-      .mxn-font-style(20px; 30px; @black);
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 12px;
+      top: 22px;
+      left: 100px;
+      background-image: url(../../img/img.svg);
+
+      @media (min-width: @tablet-width) {
+        top: 65px;
+        left: 130px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 30px;
+        left: 130px;
+      }
     }
   }
 }

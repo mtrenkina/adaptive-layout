@@ -1,0 +1,38 @@
+.effect-list {
+  display: flex;
+  column-gap: 30px;
+  justify-content: space-between;
+
+  &__item {
+    display: flex;
+    width: 125px;
+    flex-direction: column;
+    position: relative;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid @special_grey;
+  }
+
+  &__term {
+    display: block;
+    position: absolute;
+    .mxn-font-style(12px; 12px);
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: lowercase;
+    text-align: center;
+    order: 2;
+    top: 40px;
+    left: 0px;
+    background-color: @background-grey;
+    padding: 5px;
+    margin-left: 23px;
+    margin-right: 23px;
+  }
+
+  &__definition {
+    display: inline-block;
+    .mxn-font-style(24px; 24px; @black);
+    order: 1;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
