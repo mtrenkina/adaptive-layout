@@ -1,0 +1,27 @@
+.social-list {
+  .mxn-list-style();
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  position: relative;
+
+  &__item a {
+    padding: 10px;
+  }
+
+  &::before {
+    @media (max-width: @mobile-width-max) {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0;
+      width: 280px;
+      height: 1px;
+      background-color: @grey-border;
+      box-shadow: 0 60px 0 0 @grey-border;
+    }
+  }
+}
