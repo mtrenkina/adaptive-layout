@@ -13,6 +13,7 @@
 @white: #ffffff;
 @black: #000000;
 @border_grey: #e6e6e6;
+@plus-grey: #d3d3d3;
 
 //Viewports
 @mobile-width: 320px;
@@ -20,6 +21,13 @@
 @tablet-width: 768px;
 @tablet-width-max: 1439px;
 @desktop-width: 1440px;
+
+@tablet: ~"(min-width: @{tablet-width})";
+@desktop: ~"(min-width: @{desktop-width})";
+
+//Retina
+@retina-dpi: 144dpi;
+@retina: ~"(min-resolution: @{retina-dpi})";
 
 //Font parameters
 @baseFontSize: 14px;

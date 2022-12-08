@@ -1,8 +1,3 @@
-//Navigation menu
-let navMain = document.querySelector(".main-nav");
-let navToggle = document.querySelector(".main-nav__toogle");
-
-//Slider
 let slider = document.querySelector(".slider__images");
 let before = slider.querySelector(".slider__image-wrapper--before");
 let beforeImage = before.querySelector(".slider__picture");
@@ -13,28 +8,11 @@ const mobileWidth = window.matchMedia("(max-width: 767px)");
 
 let isActive = false;
 
-//Navigation menu
-navMain.classList.remove("main-nav--nojs");
-
-navToggle.addEventListener("click", function () {
-  if (navMain.classList.contains("main-nav--closed")) {
-    navMain.classList.remove("main-nav--closed");
-    navMain.classList.add("main-nav--opened");
-  } else {
-    navMain.classList.add("main-nav--closed");
-    navMain.classList.remove("main-nav--opened");
-  }
-});
-
-//Slider
-
-// change.oninput = function () {
-//   change.innerHTML = this.value;
-// };
-
 let beforeAfterSlider = (x) => {
   let shift = Math.max(0, Math.min(x, slider.offsetWidth));
-  before.style.width = `${shift}px`;
+  let finalWidth = slider.offsetWidth - shift;
+  //before.style.width = `${shift}px`;
+  before.style.width = `${finalWidth}px`;
 
   let percentWidth = Math.round((shift / slider.offsetWidth) * 100);
   change.value = `${percentWidth}`;
@@ -55,9 +33,8 @@ let pauseEvents = (e) => {
   return false;
 };
 
+//Sets the gradient for slider to the correct color stops
 function handleSlider(change) {
-  // this sets the gradient for one slider to the correct color stops
-
   if (mobileWidth.matches) {
     var gradValue = Math.round(
       (change.value / change.getAttribute("max")) * 1 * 100
@@ -96,11 +73,6 @@ document.body.addEventListener("mousemove", (e) => {
   pauseEvents(e);
 });
 
-change.addEventListener("change", (e) => {
-  // x = e.pageX;
-  // widthChange(x);
-});
-
 beforeButton.addEventListener("click", () => {
   before.style.width = `${slider.offsetWidth}px`;
   change.value = 0;
@@ -115,6 +87,6 @@ afterButton.addEventListener("click", () => {
 
 window.addEventListener("resize", function () {
   if (mobileWidth.matches) {
-    change.style.background = "";
+    change.style.background = " ";
   }
 });

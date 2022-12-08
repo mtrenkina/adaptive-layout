@@ -1,8 +1,17 @@
 .site-list {
   .mxn-list-style();
+  height: 100%;
 
   &__item {
     position: relative;
+
+    @media (min-width: @tablet-width) {
+      height: 100%;
+      padding-top: 18px;
+    }
+
+    @media (min-width: @desktop-width) {
+    }
   }
 
   &__item a {
@@ -30,14 +39,9 @@
     }
   }
 
-  &__item--active::after {
+  &__item--active {
     @media (min-width: @tablet-width) {
-      content: "";
-      position: absolute;
-      top: 35px;
-      height: 2px;
-      width: 63px;
-      background-color: @basic_green;
+      border-bottom: 2px solid @basic_green;
     }
 
     @media (min-width: @desktop-width) {

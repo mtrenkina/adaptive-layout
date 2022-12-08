@@ -38,12 +38,11 @@
       background-color: @background-grey;
       position: absolute;
       top: 0;
-      left: 0px;
-      z-index: 2;
       overflow: hidden;
 
       @media (min-width: @tablet-width) {
-        background: linear-gradient(to bottom, white 31%, transparent 10%);
+        background: linear-gradient(to bottom, white 31%, transparent 10%),
+          linear-gradient(to top, @background-grey 69%, transparent 10%);
         width: 50%;
       }
       @media (min-width: @desktop-width) {
@@ -107,11 +106,17 @@
 
     &:after {
       @media (min-width: @tablet-width) {
+        content: "";
         position: absolute;
-        top: 0;
+        display: block;
+        top: 40px;
+        left: 12px;
         width: 45px;
-        height: 5px;
-        color: black;
+        height: 1px;
+        background-color: transparent;
+        opacity: 0.24;
+        border: none;
+        border-bottom: 1px dotted black;
       }
     }
   }

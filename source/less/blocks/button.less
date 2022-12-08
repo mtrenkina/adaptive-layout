@@ -6,6 +6,10 @@
   width: 280px;
   height: 40px;
   background-color: @basic_green;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
 
   .mxn-font-style(@baseFontSize; @baseLineHeight; @white);
 
@@ -16,10 +20,10 @@
     .mxn-font-style(20px; @baseLineHeight-tablet; @white);
   }
 
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
+  &--grey {
+    background-color: @basic_grey;
+    color: @special_dark-grey;
+  }
 
   &:focus {
     outline-width: 2px;
