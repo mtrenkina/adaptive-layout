@@ -8,10 +8,10 @@
     display: flex;
     justify-content: space-between;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       padding: 60px 70px;
     }
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       position: absolute;
       background-color: white;
       z-index: 5;
@@ -27,7 +27,7 @@
     .mxn-font-style(16px; 18px; black);
     text-transform: uppercase;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       .mxn-font-style(20px; 21px; black);
     }
   }
@@ -36,20 +36,20 @@
     .mxn-font-style(14px; 20px; black);
     font-family: Arial, Helvetica, sans-serif;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       .mxn-font-style(16px; 20px; black);
       font-family: Arial, Helvetica, sans-serif;
       text-align: end;
     }
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       text-align: start;
     }
 
     & p {
-      @media (min-width: @tablet-width) {
+      @media @tablet {
         padding-top: 15px;
       }
-      @media (min-width: @desktop-width) {
+      @media @desktop {
         padding-top: 15px;
       }
     }
@@ -63,11 +63,11 @@
     background-position: center center;
     background-repeat: no-repeat;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       height: 400px;
       background-image: url(../../img/tablet/location-tablet@1x.png);
     }
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       height: 400px;
       background-image: url(../../img/desktop/location-desktop@1x.png);
     }
@@ -76,4 +76,8 @@
 
 .map__contacts--catalog {
   background-color: @basic_grey;
+
+  @media @desktop {
+    background-color: white;
+  }
 }

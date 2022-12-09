@@ -1,11 +1,15 @@
 .adds-list {
+  @media @desktop {
+    min-height: 289px;
+  }
+
   &__item {
     display: grid;
     row-gap: 10px;
     padding: 15px 0;
     border-bottom: 1px solid @special_grey;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       border-left: 1px solid @special_grey;
       border-right: 1px solid @special_grey;
       grid-template-columns: 1fr 1fr;
@@ -14,7 +18,15 @@
       row-gap: 10px;
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
+      border-left: none;
+      border-right: none;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 15px 0;
+      column-gap: 38px;
+      height: 72px;
+      align-items: center;
     }
   }
 
@@ -26,11 +38,12 @@
     .mxn-font-style(16px; 16px; @special_dark-grey-2);
     text-transform: uppercase;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       .mxn-font-style(20px; 20px; @special_dark-grey-2);
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
+      grid-column: ~"1 / 2";
     }
   }
 
@@ -40,19 +53,21 @@
     display: flex;
     justify-content: space-between;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       .mxn-font-style(16px; 20px; @special_dark-grey);
       font-family: Arial, Helvetica, sans-serif;
       justify-content: end;
       gap: 45px;
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
+      grid-column: ~"2 / 3";
+      justify-content: space-between;
     }
   }
 
   &__button {
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       grid-column: ~"1 / 3";
       width: 100%;
       height: 38px;
@@ -60,7 +75,8 @@
       padding: 11px 0;
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
+      grid-column: ~"3 / 4";
     }
   }
 }

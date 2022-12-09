@@ -1,5 +1,7 @@
 .page-main {
-  padding-top: 10px;
+  @media @mobile-max {
+    padding-top: 10px;
+  }
 
   &__heading {
     .mxn-font-style(36px; 36px; black);
@@ -12,9 +14,20 @@
     border-top: 1px solid @grey-border;
     border-bottom: 1px solid @special_grey-2;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       .mxn-font-style(60px; 60px; black);
       border: none;
+    }
+  }
+
+  &__heading--catalog {
+    @media @tablet {
+      height: auto;
+      padding: 30px 30px 20px 30px;
+    }
+
+    @media @desktop {
+      padding: 30px 110px 20px 110px;
     }
   }
 }

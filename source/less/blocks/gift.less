@@ -1,6 +1,6 @@
 .gift {
   padding: 0 20px;
-  margin: 20px 0 35px 0;
+  margin: 40px 0 35px 0;
   width: 100%;
   height: 289px;
   position: relative;
@@ -13,6 +13,9 @@
   }
 
   @media @tablet {
+    padding: 0;
+    height: 200px;
+    margin: 68px 0 75px 0;
     background-image: url("../../img/tablet/gift-photo-tablet@1x.jpg");
 
     @media @retina {
@@ -22,6 +25,8 @@
 
   @media @desktop {
     background-image: url("../../img/desktop/gift-photo-desktop@1x.jpg");
+    margin: 0;
+    height: 289px;
 
     @media @retina {
       background-image: url("../../img/desktop/gift-photo-desktop@2x.jpg");
@@ -34,14 +39,18 @@
     text-align: center;
     padding-top: 190px;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       text-align: left;
       padding: 0px;
-      padding-top: 110px;
-      padding-left: 430px;
+      padding-top: 70px;
+      padding-left: 420px;
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
+      padding-top: 190px;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
     }
 
     &::before {
@@ -50,15 +59,17 @@
       width: 80px;
       height: 80px;
       top: 60px;
-      left: 120px;
+      left: 100px;
       background-image: url(../../img/icon_gift.svg);
 
-      @media (min-width: @tablet-width) {
-        top: 100px;
-        left: 110px;
+      @media @tablet {
+        top: 60px;
+        left: 80px;
       }
 
-      @media (min-width: @desktop-width) {
+      @media @desktop {
+        top: 60px;
+        left: 80px;
       }
     }
   }

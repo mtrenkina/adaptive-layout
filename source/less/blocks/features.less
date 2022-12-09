@@ -1,26 +1,33 @@
 .features {
   position: relative;
+  margin-bottom: 42px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-right: 110px;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
   }
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0px;
+  @media (@tablet) and (@tablet-max) {
+    border-bottom: 1px solid @border_grey;
+  }
+
+  @media @desktop {
+    padding-bottom: 0px;
+    margin-bottom: 22px;
   }
 
   &__heading {
     .mxn-font-style(36px; 40px; @black);
-    padding-bottom: 30px;
+    padding-bottom: 38px;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet-width {
       .mxn-font-style(60px; 60px; @black);
       padding-bottom: 75px;
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       .mxn-font-style(60px; 60px; @black);
+      padding-bottom: 62px;
     }
   }
 
@@ -28,17 +35,19 @@
     .mxn-list-style();
     display: grid;
     gap: 20px;
+    min-height: 300px;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       column-gap: 65px;
       row-gap: 90px;
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 1fr;
+      min-height: 230px;
     }
   }
 
@@ -48,13 +57,17 @@
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 80px;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       .mxn-font-style(16px; 24px);
       padding-left: 0;
       padding-top: 110px;
       padding-bottom: 65px;
       padding-right: 5px;
       width: 250px;
+    }
+
+    @media @desktop {
+      padding-bottom: 0px;
     }
 
     &::before {
@@ -67,18 +80,18 @@
       background-position: 50% 50%;
       background-repeat: no-repeat;
 
-      @media (min-width: @tablet-width) {
+      @media @tablet {
         width: 80px;
         height: 80px;
         top: 0;
       }
 
-      @media (min-width: @desktop-width) {
+      @media @desktop {
       }
     }
 
     &::after {
-      @media (min-width: @tablet-width) {
+      @media @tablet {
         content: "";
         position: absolute;
         z-index: -1;
@@ -90,7 +103,7 @@
         background-repeat: no-repeat;
       }
 
-      @media (min-width: @desktop-width) {
+      @media @desktop {
       }
     }
   }
@@ -131,17 +144,5 @@
     background-image: url(../../img/icon_4.svg);
     width: 136px;
     right: 5px;
-  }
-
-  &::after {
-    @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      width: 768px;
-      height: 1px;
-      background-color: @border_grey;
-      bottom: -60px;
-    }
   }
 }

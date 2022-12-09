@@ -1,11 +1,11 @@
 .slider {
   height: auto;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-bottom: 60px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     display: flex;
     flex-direction: column;
     width: 625px;
@@ -17,7 +17,7 @@
     position: relative;
     overflow: hidden;
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       padding-bottom: 20px;
     }
   }
@@ -40,12 +40,12 @@
       top: 0;
       overflow: hidden;
 
-      @media (min-width: @tablet-width) {
+      @media @tablet {
         background: linear-gradient(to bottom, white 31%, transparent 10%),
           linear-gradient(to top, @background-grey 69%, transparent 10%);
         width: 50%;
       }
-      @media (min-width: @desktop-width) {
+      @media @desktop {
         background: linear-gradient(to bottom, white 32%, transparent 10%);
       }
     }
@@ -53,10 +53,10 @@
     &--after {
       background-color: @background-grey;
 
-      @media (min-width: @tablet-width) {
+      @media @tablet {
         background-color: transparent;
       }
-      @media (min-width: @desktop-width) {
+      @media @desktop {
         background-color: transparent;
       }
     }
@@ -72,12 +72,12 @@
     width: 230px;
     height: 40px;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       width: 590px;
       height: 40px;
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
     }
   }
 
@@ -96,16 +96,16 @@
     cursor: pointer;
     position: relative;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       .mxn-font-style(20px);
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       .mxn-font-style(20px; 20px; @black);
     }
 
     &:after {
-      @media (min-width: @tablet-width) {
+      @media @tablet {
         content: "";
         position: absolute;
         display: block;
@@ -131,7 +131,7 @@
     border: 1px solid @special_grey;
     border-radius: 6px;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       width: 428px;
       height: 35px;
       padding: 0px;
@@ -139,7 +139,7 @@
       border: none;
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       .mxn-font-style(60px; 60px; @black);
     }
   }
@@ -155,11 +155,11 @@
     padding: 3px 5px;
     border-radius: 6px;
 
-    @media (max-width: @mobile-width-max) {
+    @media @mobile-max {
       background: linear-gradient(90deg, #68b738 50%, #ffffff 53%);
     }
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       width: 422px;
       border-radius: 5px;
       border: 1px solid @scale_grey;
@@ -168,7 +168,7 @@
       background: @scale_grey;
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
     }
 
     &::-webkit-slider-runnable-track {
@@ -176,10 +176,10 @@
       box-sizing: border-box;
       background-color: @scale_grey;
 
-      @media (min-width: @tablet-width) {
+      @media @tablet {
       }
 
-      @media (min-width: @desktop-width) {
+      @media @desktop {
       }
     }
 
@@ -187,7 +187,7 @@
       appearance: none;
       cursor: pointer;
 
-      @media (min-width: @tablet-width) {
+      @media @tablet {
         position: relative;
         display: block;
         width: 34px;
@@ -197,11 +197,11 @@
         border: 1px solid @special_grey;
       }
 
-      @media (min-width: @desktop-width) {
+      @media @desktop {
       }
 
       &:after {
-        @media (min-width: @tablet-width) {
+        @media @tablet {
           content: "";
           position: absolute;
           top: 50%;

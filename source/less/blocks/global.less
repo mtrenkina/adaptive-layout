@@ -35,15 +35,6 @@ img {
   display: flex;
   min-height: 100%;
   flex-direction: column;
-  gap: 20px;
-
-  @media (min-width: @tablet-width) {
-    gap: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    gap: 0px;
-  }
 }
 
 .container {
@@ -51,11 +42,11 @@ img {
   margin: 0 auto;
   width: @mobile-width;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     width: @tablet-width;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     width: @desktop-width;
   }
 }
@@ -63,11 +54,11 @@ img {
 .container--paddings {
   padding: 0 20px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 0 30px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 0 110px;
   }
 }

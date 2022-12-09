@@ -12,7 +12,7 @@
     height: 236px;
     width: 100%;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 35px;
       height: 150px;
@@ -21,7 +21,7 @@
       margin: 0 auto;
       align-content: center;
     }
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       height: 149px;
       padding: 0px;
       width: 1440px;
@@ -32,11 +32,11 @@
   &__logo {
     padding: 20px;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       justify-self: start;
       padding-left: 0px;
     }
-    @media (min-width: @desktop-width) {
+    @media @desktop {
     }
   }
 }

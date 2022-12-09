@@ -30,7 +30,7 @@
   </head>
   <body class="page-body container wrapper">
     <header class="page-header container--paddings">
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--catalog main-nav--closed main-nav--nojs">
         <a class="page-header__logo" href="index.html">
           <picture>
             <source
@@ -65,13 +65,13 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item ">
-              <a href="#"> Главная </a>
+            <li class="site-list__item site-list__item--catalog">
+              <a href="index.html"> Главная </a>
             </li>
-            <li class="site-list__item site-list__item--active">
-              <a href="catalog.html"> Каталог продукции </a>
+            <li class="site-list__item site-list__item--catalog site-list__item--active">
+              <a href="#"> Каталог продукции </a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--catalog">
               <a href="form.html"> Подбор программы </a>
             </li>
           </ul>
@@ -80,7 +80,7 @@
     </header>
 
     <main class="page-main wrapper--little">
-      <h1 class="page-main__heading container--paddings">Каталог продукции</h1>
+      <h1 class="page-main__heading page-main__heading--catalog container--paddings">Каталог продукции</h1>
 
       <section class="items">
         <ul class="items__list">
@@ -355,7 +355,7 @@
         </ul>
       </section>
 
-      <section class="additional">
+      <section class="additional container--paddings">
         <h2 class="additional__heading">Дополнительные товары</h2>
         <ul class="additional__list adds-list">
           <li class="adds-list__item">
@@ -394,15 +394,16 @@
             <a class="adds-list__button button" href="#"> заказать </a>
           </li>
         </ul>
+
+        <article class="additional__gift gift">
+          <p class="gift__description">
+            Закажите все <br />
+            и получите чехол для<br />
+            кота в подарок!
+          </p>
+        </article>
       </section>
 
-      <section class="gift">
-        <p class="gift__description">
-          Закажите все <br />
-          и получите чехол для<br />
-          кота в подарок!
-        </p>
-      </section>
     </main>
 
     <footer class="page-footer">
