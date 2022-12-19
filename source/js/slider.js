@@ -10,7 +10,7 @@ const mobileWidth = window.matchMedia("(max-width: 767px)");
 
 let isActive = false;
 
-let beforeAfterSlider = (x) => {
+const beforeAfterSlider = (x) => {
   let shift = Math.max(0, Math.min(x, slider.offsetWidth));
   let finalWidth = slider.offsetWidth - shift;
   before.style.width = `${finalWidth}px`;
@@ -19,7 +19,7 @@ let beforeAfterSlider = (x) => {
   change.value = `${percentWidth}`;
 };
 
-let widthChange = (x) => {
+const widthChange = (x) => {
   x -= slider.getBoundingClientRect().left;
   beforeAfterSlider(x);
 
@@ -28,7 +28,7 @@ let widthChange = (x) => {
   }
 };
 
-let pauseEvents = (e) => {
+const pauseEvents = (e) => {
   e.stopPropagation();
   e.preventDefault();
   return false;
