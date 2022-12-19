@@ -36,7 +36,13 @@
       justify-self: start;
       padding-left: 0px;
     }
-    @media @desktop {
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      stroke: desaturate(@basic_green, 60%);
     }
   }
 }

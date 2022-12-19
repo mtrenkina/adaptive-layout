@@ -76,9 +76,6 @@
       width: 590px;
       height: 40px;
     }
-
-    @media @desktop {
-    }
   }
 
   &__button-text {
@@ -121,6 +118,20 @@
     }
   }
 
+  &__button:hover {
+    &:after {
+      @media @tablet {
+        border-bottom: 1px solid black;
+      }
+    }
+
+    &:focus {
+      @media @tablet {
+        border-bottom: none;
+      }
+    }
+  }
+
   &__range-wrapper {
     position: relative;
     overflow: hidden;
@@ -144,10 +155,23 @@
     }
   }
 
+  &__range-track {
+    @media @tablet {
+      position: absolute;
+      width: 428px;
+      height: 5px;
+      border-radius: 10px;
+      z-index: 0;
+      top: 15px;
+      left: -2px;
+      background-color: @scale_grey;
+    }
+  }
+
   &__range {
-    position: absolute;
-    top: 3px;
-    left: 5px;
+    position: relative;
+    top: -9px;
+    left: 0px;
     appearance: none;
     overflow: hidden;
     width: 72px;
@@ -160,26 +184,24 @@
     }
 
     @media @tablet {
-      width: 422px;
-      border-radius: 5px;
-      border: 1px solid @scale_grey;
-      top: 13px;
-      left: 1px;
-      background: @scale_grey;
-    }
-
-    @media @desktop {
+      width: 428px;
+      height: 35px;
+      border: none;
+      top: 0px;
+      left: 0px;
+      background-color: transparent;
     }
 
     &::-webkit-slider-runnable-track {
       display: block;
       box-sizing: border-box;
       background-color: @scale_grey;
+      cursor: pointer;
 
       @media @tablet {
-      }
-
-      @media @desktop {
+        background-color: @background-grey;
+        width: 428px;
+        height: 35px;
       }
     }
 
@@ -189,29 +211,19 @@
 
       @media @tablet {
         position: relative;
-        display: block;
         width: 34px;
         height: 34px;
         background-color: white;
         border-radius: 50%;
         border: 1px solid @special_grey;
+        z-index: 5;
       }
+    }
 
-      @media @desktop {
-      }
-
-      &:after {
-        @media @tablet {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          display: block;
-          width: 8px;
-          height: 8px;
-          background-color: @basic_green;
-          border-radius: 50%;
-        }
+    &::-webkit-slider-thumb:hover {
+      @media @tablet {
+        border: 1px solid @basic_green;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
       }
     }
   }

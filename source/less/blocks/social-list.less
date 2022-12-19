@@ -3,6 +3,7 @@
   height: 100%;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   column-gap: 10px;
@@ -23,5 +24,13 @@
       background-color: @grey-border;
       box-shadow: 0 60px 0 0 @grey-border;
     }
+  }
+
+  &__link:hover .social-list__image {
+    stroke: @basic_green;
+  }
+
+  &__link:active {
+    stroke: fade(@basic_green, 30%);
   }
 }

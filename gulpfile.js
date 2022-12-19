@@ -7,6 +7,7 @@ const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore");
+const svgmin = require("gulp-svgmin");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -53,11 +54,14 @@ const watcher = () => {
 };
 
 const sprite = () => {
-  return gulp
-    .src("source/img/sprite_icons/icon_*.svg")
-    .pipe(svgstore())
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"));
+  return (
+    gulp
+      .src("source/img/sprite_icons/icon_*.svg")
+      .pipe(svgstore({ inlineSvg: true }))
+      //.pipe(svgmin())
+      .pipe(rename("sprite.svg"))
+      .pipe(gulp.dest("source"))
+  );
 };
 
 exports.sprite = sprite;

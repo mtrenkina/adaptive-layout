@@ -29,6 +29,14 @@
     @media @tablet {
       .mxn-font-style(18px; 24px; black);
       padding: 24px 0;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
 
     @media @desktop {
@@ -36,7 +44,7 @@
     }
   }
 
-  &__item--catalog a {
+  &__item--noimage a {
     @media @desktop {
       .mxn-font-style(18px; 24px; black);
     }
@@ -52,9 +60,14 @@
     @media @desktop {
       border-bottom: 2px solid white;
     }
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
   }
 
-  &__item--active.site-list__item--catalog a {
+  &__item--active.site-list__item--noimage a {
     @media @desktop {
       border-bottom: 2px solid @basic_green;
     }

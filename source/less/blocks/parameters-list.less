@@ -1,0 +1,26 @@
+.parameters-list {
+  display: grid;
+  row-gap: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid @grey-border;
+
+  @media @tablet {
+    border: none;
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__label {
+    margin-right: 12px;
+
+    @media @tablet {
+      .mxn-font-style(20px; 20px);
+    }
+  }
+}

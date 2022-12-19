@@ -1,0 +1,66 @@
+.form-message {
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+
+  @media @tablet {
+    margin-bottom: 50px;
+  }
+
+  @media @desktop {
+    grid-row-start: 3;
+    grid-column: ~"1 / 3";
+  }
+
+  &__heading {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 158px;
+      height: 2px;
+      top: 20px;
+      right: -180px;
+      background-color: @basic_green;
+
+      @media @tablet {
+        width: 478px;
+        height: 2px;
+        top: 30px;
+        right: -520px;
+      }
+
+      @media @desktop {
+        width: 1108px;
+        height: 2px;
+        top: 30px;
+        right: -1148px;
+      }
+    }
+
+    &::before {
+      @media @tablet {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        top: 30px;
+        left: -69px;
+        background-color: @basic_green;
+      }
+
+      @media @desktop {
+        width: 70px;
+        height: 2px;
+        top: 30px;
+        left: -110px;
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-top: 30px;
+
+    @media @tablet {
+      margin-top: 60px;
+    }
+  }
+}

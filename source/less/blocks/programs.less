@@ -169,11 +169,25 @@
       top: 22px;
       left: 100px;
       background-image: url(../../img/icon_arrow.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all 0.1s linear;
 
       @media @tablet {
         top: 30px;
         left: 130px;
       }
+    }
+
+    &:hover::after {
+      right: -10px;
+      width: 33px;
+      background-image: url("../../img/icon_arrow_big.svg");
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

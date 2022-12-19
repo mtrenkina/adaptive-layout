@@ -1,3 +1,5 @@
+"use strict";
+
 let slider = document.querySelector(".slider__images");
 let before = slider.querySelector(".slider__image-wrapper--before");
 let beforeImage = before.querySelector(".slider__picture");
@@ -11,7 +13,6 @@ let isActive = false;
 let beforeAfterSlider = (x) => {
   let shift = Math.max(0, Math.min(x, slider.offsetWidth));
   let finalWidth = slider.offsetWidth - shift;
-  //before.style.width = `${shift}px`;
   before.style.width = `${finalWidth}px`;
 
   let percentWidth = Math.round((shift / slider.offsetWidth) * 100);
@@ -48,7 +49,7 @@ function handleSlider(change) {
 
     change.style.background = grad;
   } else {
-    change.style.background = "";
+    change.style.background = "transparent";
   }
 }
 

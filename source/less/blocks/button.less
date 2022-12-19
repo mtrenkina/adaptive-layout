@@ -20,18 +20,24 @@
     .mxn-font-style(20px; @baseLineHeight-tablet; @white);
   }
 
+  &:hover {
+    background-color: @basic_green-2;
+  }
+
+  &:active {
+    color: fade(white, 60%);
+  }
+
   &--grey {
     background-color: @basic_grey;
     color: @special_dark-grey;
-  }
 
-  &:focus {
-    outline-width: 2px;
-    outline-style: solid;
-    outline-offset: 1px;
-  }
+    &:hover {
+      background-color: @special_grey-2;
+    }
 
-  &:disabled {
-    opacity: 0.5;
+    &:active {
+      color: fade(@special_dark-grey, 60%);
+    }
   }
 }

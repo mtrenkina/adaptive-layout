@@ -7,8 +7,6 @@
   @media @tablet {
     justify-content: end;
   }
-  @media @desktop {
-  }
 
   &__text {
     .mxn-font-style(16px; 20px);
@@ -17,12 +15,27 @@
 
   &__link {
     .mxn-link-style();
-    padding: 10px 0 10px 10px;
-    display: block;
-  }
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  &__logo {
-    width: 27px;
-    height: 34px;
+    @media @tablet {
+      justify-content: end;
+      column-gap: 22px;
+    }
+
+    &:hover {
+      stroke: @basic_green;
+    }
+
+    &:active {
+      stroke: fade(@basic_green, 60%);
+    }
+
+    &:active .copyright__text {
+      color: fade(@special_dark-grey, 60%);
+    }
   }
 }
