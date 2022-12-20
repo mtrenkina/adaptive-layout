@@ -1,12 +1,14 @@
 "use strict";
 
-let slider = document.querySelector(".slider__images");
-let before = slider.querySelector(".slider__image-wrapper--before");
-let beforeImage = before.querySelector(".slider__picture");
-let change = document.querySelector(".slider__range");
-let beforeButton = document.querySelector(".slider__button--before");
-let afterButton = document.querySelector(".slider__button--after");
+const slider = document.querySelector(".slider__images");
+const before = slider.querySelector(".slider__image-wrapper--before");
+const beforeImage = before.querySelector(".slider__picture");
+const change = document.querySelector(".slider__range");
+const beforeButton = document.querySelector(".slider__button--before");
+const afterButton = document.querySelector(".slider__button--after");
+const tabletWidth = window.matchMedia("(min-width: 768px)");
 const mobileWidth = window.matchMedia("(max-width: 767px)");
+const desktopWidth = window.matchMedia("(min-width: 1220px)");
 
 let isActive = false;
 
@@ -86,8 +88,14 @@ afterButton.addEventListener("click", () => {
   handleSlider(change);
 });
 
-window.addEventListener("resize", function () {
-  if (mobileWidth.matches) {
-    change.style.background = " ";
+window.onresize = function () {
+  if (tabletWidth.matches) {
+    change.style.background =
+      "linear-gradient(90deg, transparent 99%, #eaeaea 1%)";
   }
-});
+
+  if (desktopWidth.matches) {
+    change.style.background =
+      "linear-gradient(90deg,  #f2f2f2 70.5%, transparent 50%)";
+  }
+};
