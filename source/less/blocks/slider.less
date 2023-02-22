@@ -1,0 +1,243 @@
+.slider {
+  height: auto;
+
+  @media @tablet {
+    padding-bottom: 60px;
+  }
+
+  @media @desktop {
+    display: flex;
+    flex-direction: column;
+    width: 625px;
+    padding: 0px;
+  }
+
+  &__images {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    @media @desktop {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center left;
+  }
+
+  &__image-wrapper {
+    height: 100%;
+    width: 100%;
+
+    &--before {
+      background-color: @background-grey;
+      position: absolute;
+      top: 0;
+      overflow: hidden;
+
+      @media @tablet {
+        background: linear-gradient(to bottom, white 31%, transparent 10%),
+          linear-gradient(to top, @background-grey 69%, transparent 10%);
+        width: 50%;
+      }
+      @media @desktop {
+        background: linear-gradient(to bottom, white 32%, transparent 10%);
+      }
+    }
+
+    &--after {
+      background-color: @background-grey;
+
+      @media @tablet {
+        background-color: transparent;
+      }
+      @media @desktop {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__controls {
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 230px;
+    height: 40px;
+
+    @media @tablet {
+      width: 590px;
+      height: 40px;
+    }
+  }
+
+  &__button-text {
+    position: relative;
+  }
+
+  &__button {
+    padding: 0;
+    width: 70px;
+    height: 40px;
+    border: none;
+    .mxn-font-style(14px; 18px; @black);
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+
+    @media @tablet {
+      .mxn-font-style(20px);
+    }
+
+    @media @desktop {
+      .mxn-font-style(20px; 20px; @black);
+    }
+
+    &:after {
+      @media @tablet {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 40px;
+        left: 12px;
+        width: 45px;
+        height: 1px;
+        background-color: transparent;
+        opacity: 0.24;
+        border: none;
+        border-bottom: 1px dotted black;
+      }
+    }
+  }
+
+  &__button:hover {
+    &:after {
+      @media @tablet {
+        border-bottom: 1px solid black;
+      }
+    }
+
+    &:active {
+      @media @tablet {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__range-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 85px;
+    height: 14px;
+    padding: 3px 5px;
+    background-color: @white;
+    border: 1px solid @special_grey;
+    border-radius: 6px;
+
+    @media @tablet {
+      width: 428px;
+      height: 35px;
+      padding: 0px;
+      background: transparent;
+      border: none;
+    }
+
+    @media @desktop {
+      .mxn-font-style(60px; 60px; @black);
+      background: linear-gradient(to right, @basic_grey 70.5%, transparent 50%);
+    }
+  }
+
+  &__range-track {
+    @media @tablet {
+      position: absolute;
+      width: 428px;
+      height: 5px;
+      border-radius: 10px;
+      z-index: 0;
+      top: 15px;
+      left: -2px;
+      background-color: @scale_grey;
+    }
+  }
+
+  &__range {
+    position: relative;
+    top: -9px;
+    left: 0px;
+    appearance: none;
+    overflow: hidden;
+    width: 72px;
+    height: 6px;
+    padding: 3px 5px;
+    border-radius: 6px;
+
+    @media @mobile-max {
+      background: linear-gradient(90deg, @basic_green 50%, #ffffff 53%);
+    }
+
+    @media @tablet {
+      width: 428px;
+      height: 35px;
+      border: none;
+      top: 0px;
+      left: 0px;
+      background: transparent;
+    }
+
+    @media @desktop {
+      top: -20px;
+      left: 0px;
+      background: linear-gradient(to right, @basic_grey 70.5%, transparent 50%);
+    }
+
+    &::-webkit-slider-runnable-track {
+      display: block;
+      box-sizing: border-box;
+      background-color: @scale_grey;
+      cursor: pointer;
+
+      @media @tablet {
+        background-color: @background-grey;
+        width: 428px;
+        height: 35px;
+      }
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      cursor: pointer;
+
+      @media @tablet {
+        position: relative;
+        width: 34px;
+        height: 34px;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid @special_grey;
+        z-index: 5;
+      }
+    }
+
+    &::-webkit-slider-thumb:hover {
+      @media @tablet {
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &::-webkit-slider-thumb:active {
+      @media @tablet {
+        border: 1px solid @basic_green;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

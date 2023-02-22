@@ -1,0 +1,29 @@
+.social-list {
+  .mxn-list-style();
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+  position: relative;
+
+  @media @mobile-max {
+    border-top: 1px solid @grey-border;
+    border-bottom: 1px solid @grey-border;
+  }
+
+  &__item a {
+    padding: 10px;
+    color: @icon_grey;
+  }
+
+  &__link:hover {
+    color: @basic_green;
+  }
+
+  &__link:active {
+    color: fade(@basic_green, 30%);
+  }
+}

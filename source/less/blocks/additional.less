@@ -1,0 +1,58 @@
+.additional {
+  width: 100%;
+
+  @media @desktop {
+    display: grid;
+    grid-template-columns: 900px 245px;
+    column-gap: 75px;
+    margin-bottom: 85px;
+  }
+
+  &__heading {
+    .mxn-font-style(24px; 24px; black);
+    padding: 0 20px 30px 0;
+    position: relative;
+
+    @media @tablet {
+      .mxn-font-style(36px; 36px; black);
+      padding: 0;
+      width: 410px;
+      padding-left: 35px;
+      padding-right: 35px;
+      padding-bottom: 70px;
+      padding-top: 0px;
+      background-color: white;
+    }
+
+    @media @desktop {
+      padding-bottom: 75px;
+      grid-column: ~"1 / 3";
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 53px;
+      height: 2px;
+      top: 15px;
+      right: -20px;
+      background-color: @basic_green;
+
+      @media @tablet {
+        width: 768px;
+        z-index: -1;
+        top: 22px;
+        left: -30px;
+      }
+
+      @media @desktop {
+        width: 1440px;
+        left: -110px;
+      }
+    }
+  }
+
+  &__list {
+    .mxn-list-style();
+  }
+}

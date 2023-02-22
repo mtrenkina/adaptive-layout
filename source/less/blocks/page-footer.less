@@ -1,0 +1,48 @@
+.page-footer {
+  background: linear-gradient(to top, @basic_grey 100%, transparent 50%);
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 65px 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    padding-bottom: 0;
+    height: 236px;
+    width: 100%;
+
+    @media @tablet {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 35px;
+      height: 150px;
+      padding: 0px;
+      width: 708px;
+      margin: 0 auto;
+      align-content: center;
+    }
+    @media @desktop {
+      height: 149px;
+      padding: 0px;
+      width: 1440px;
+      padding: 0 110px;
+    }
+  }
+
+  &__logo {
+    padding: 20px;
+
+    @media @tablet {
+      justify-self: start;
+      padding-left: 0px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      stroke: desaturate(@basic_green, 60%);
+    }
+  }
+}

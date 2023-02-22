@@ -1,0 +1,135 @@
+.main-nav {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding-top: 11px;
+  padding-bottom: 0px;
+  align-items: center;
+
+  @media @tablet {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    min-height: auto;
+  }
+
+  @media @desktop {
+    padding-top: 57px;
+    padding-bottom: 28px;
+  }
+
+  &::after {
+    @media @desktop {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 620px;
+      width: 710px;
+      height: 710px;
+      background-image: url("../../img/desktop/index-background-desktop.jpg"),
+        linear-gradient(180deg, @basic_green 62.4%, @white 62.4%);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--noimage {
+    &::after {
+      @media @desktop {
+        content: none;
+      }
+    }
+  }
+}
+
+.main-nav__wrapper {
+  @media @mobile-max {
+    margin-top: 15px;
+  }
+
+  @media @tablet {
+    display: flex;
+    align-items: center;
+    width: 440px;
+    margin: 0;
+  }
+
+  @media @desktop {
+    width: 478px;
+  }
+}
+
+.main-nav__list {
+  justify-content: space-between;
+  align-items: center;
+
+  @media @tablet {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.main-nav__toogle {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 15px;
+  right: 0;
+  z-index: 2;
+  border: 0;
+  cursor: pointer;
+  color: @black;
+  background-color: transparent;
+
+  @media @tablet {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toogle::before,
+.main-nav--opened .main-nav__toogle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: currentColor;
+}
+
+.main-nav--opened .main-nav__toogle::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.main-nav--opened .main-nav__toogle::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.main-nav--closed .main-nav__toogle::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 #000, 0 16px 0 0 #000;
+}
+
+@media @mobile-max {
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__toogle {
+    display: none;
+  }
+}

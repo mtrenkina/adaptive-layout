@@ -1,0 +1,40 @@
+.copyright {
+  width: 100%;
+
+  &__text {
+    .mxn-font-style(16px; 16px);
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 114px;
+  }
+
+  &__link {
+    .mxn-link-style();
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: @icon_grey;
+
+    @media @tablet {
+      justify-content: end;
+      column-gap: 20px;
+    }
+
+    &:hover {
+      color: @basic_green;
+    }
+
+    &:hover > .copyright__text {
+      color: fade(@special_dark-grey, 80%);
+    }
+
+    &:active {
+      color: fade(@basic_green, 60%);
+    }
+
+    &:active > .copyright__text {
+      color: fade(@special_dark-grey, 60%);
+    }
+  }
+}

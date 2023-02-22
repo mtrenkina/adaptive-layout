@@ -25,51 +25,40 @@ img {
   overflow: hidden;
 }
 
-.page {
-  height: 100%;
-  font-size: 14px;
-  font-family: "Oswald", "Times New Roman", Times, serif;
-  line-height: 18px;
-  color: @darkgrey;
-}
-
-.page__body {
-  min-height: 100%;
-  background-color: #ffffff;
-  width: 280px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  @media (min-width: @tablet-width) {
-    width: 708px;
-    padding: 0 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1220px;
-    padding: 0 60px;
-  }
-}
-
 .wrapper {
   display: flex;
   min-height: 100%;
-  overflow: hidden;
+  flex-direction: column;
+}
+
+.wrapper--little {
+  display: flex;
+  min-height: 100%;
   flex-direction: column;
 }
 
 .container {
-  width: 280px;
+  box-sizing: border-box;
   margin: 0 auto;
+  width: @mobile-width;
+
+  @media @tablet {
+    width: @tablet-width;
+  }
+
+  @media @desktop {
+    width: @desktop-width;
+  }
+}
+
+.container--paddings {
   padding: 0 20px;
 
-  @media (min-width: @tablet-width) {
-    width: 708px;
+  @media @tablet {
     padding: 0 30px;
   }
 
-  @media (min-width: @desktop-width) {
-    width: 1220px;
-    padding: 0 60px;
+  @media @desktop {
+    padding: 0 110px;
   }
 }

@@ -1,0 +1,74 @@
+.form-additional {
+  @media @desktop {
+    grid-row-start: 4;
+    grid-column: ~"1 / 3";
+  }
+
+  &__heading {
+    @media @tablet {
+      margin-bottom: 50px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 136px;
+      height: 2px;
+      top: 15px;
+      right: -159px;
+      background-color: @basic_green;
+
+      @media @tablet {
+        width: 446px;
+        height: 2px;
+        top: 20px;
+        right: -490px;
+      }
+
+      @media @desktop {
+        width: 1078px;
+        height: 2px;
+        top: 20px;
+        right: -1118px;
+      }
+    }
+
+    &::before {
+      @media @tablet {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        top: 20px;
+        left: -69px;
+        background-color: @basic_green;
+      }
+
+      @media @desktop {
+        width: 70px;
+        height: 2px;
+        top: 20px;
+        left: -110px;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 12px;
+    margin-bottom: 34px;
+
+    @media @tablet {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 30px;
+      column-gap: 70px;
+      margin-bottom: 54px;
+    }
+
+    @media @desktop {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 80px;
+      margin-bottom: 54px;
+    }
+  }
+}
