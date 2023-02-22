@@ -26,8 +26,8 @@
     }
 
     @media @desktop {
-      .mxn-font-style(60px; 60px; @black);
-      padding-bottom: 62px;
+      .mxn-font-style(60px; 50px; @black);
+      padding-bottom: 75px;
     }
   }
 
@@ -48,6 +48,7 @@
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 1fr;
       min-height: 230px;
+      column-gap: 70px;
     }
   }
 
@@ -59,6 +60,7 @@
 
     @media @tablet {
       .mxn-font-style(16px; 24px);
+      font-family: Arial, Helvetica, sans-serif;
       padding-left: 0;
       padding-top: 110px;
       padding-bottom: 65px;
@@ -68,10 +70,12 @@
 
     @media @desktop {
       padding-bottom: 0px;
+      padding-left: 1px;
+      padding-top: 111px;
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 60px;
       height: 60px;
@@ -85,14 +89,11 @@
         height: 80px;
         top: 0;
       }
-
-      @media @desktop {
-      }
     }
 
     &::after {
       @media @tablet {
-        content: "";
+        content: '';
         position: absolute;
         z-index: -1;
         width: 112px;
@@ -104,7 +105,28 @@
       }
 
       @media @desktop {
+        top: -2px;
+        right: 50px;
       }
+    }
+  }
+
+  &__item--second {
+    @media @desktop {
+      padding-left: 2px;
+    }
+  }
+
+  &__item--third {
+    @media @desktop {
+      padding-left: 5px;
+    }
+  }
+
+  &__item--fourth {
+    @media @desktop {
+      padding-left: 6px;
+      padding-right: 0px;
     }
   }
 
@@ -114,14 +136,23 @@
 
   &__item--second::before {
     background-image: url(../../img/icon_tub.svg);
+    @media @desktop {
+      left: 5px;
+    }
   }
 
   &__item--third::before {
     background-image: url(../../img/icon_eat.svg);
+    @media @desktop {
+      left: 7px;
+    }
   }
 
   &__item--fourth::before {
     background-image: url(../../img/icon_alarm.svg);
+    @media @desktop {
+      left: 8px;
+    }
   }
 
   &__item--first::after {
@@ -131,18 +162,18 @@
   &__item--second::after {
     background-image: url(../../img/icon_2.svg);
     width: 132px;
-    right: 20px;
+    right: 10px;
   }
 
   &__item--third::after {
     background-image: url(../../img/icon_3.svg);
     width: 134px;
-    right: 12px;
+    right: 5px;
   }
 
   &__item--fourth::after {
     background-image: url(../../img/icon_4.svg);
     width: 136px;
-    right: 5px;
+    right: -4px;
   }
 }

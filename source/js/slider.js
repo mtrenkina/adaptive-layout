@@ -1,14 +1,14 @@
-"use strict";
+'use strict';
 
-const slider = document.querySelector(".slider__images");
-const before = slider.querySelector(".slider__image-wrapper--before");
-const beforeImage = before.querySelector(".slider__picture");
-const change = document.querySelector(".slider__range");
-const beforeButton = document.querySelector(".slider__button--before");
-const afterButton = document.querySelector(".slider__button--after");
-const tabletWidth = window.matchMedia("(min-width: 768px)");
-const mobileWidth = window.matchMedia("(max-width: 767px)");
-const desktopWidth = window.matchMedia("(min-width: 1220px)");
+const slider = document.querySelector('.slider__images');
+const before = slider.querySelector('.slider__image-wrapper--before');
+const beforeImage = before.querySelector('.slider__picture');
+const change = document.querySelector('.slider__range');
+const beforeButton = document.querySelector('.slider__button--before');
+const afterButton = document.querySelector('.slider__button--after');
+const tabletWidth = window.matchMedia('(min-width: 768px)');
+const mobileWidth = window.matchMedia('(max-width: 767px)');
+const desktopWidth = window.matchMedia('(min-width: 1220px)');
 
 let isActive = false;
 
@@ -40,34 +40,34 @@ const pauseEvents = (e) => {
 function handleSlider(change) {
   if (mobileWidth.matches) {
     var gradValue = Math.round(
-      (change.value / change.getAttribute("max")) * 1 * 100
+      (change.value / change.getAttribute('max')) * 1 * 100
     );
     var grad =
-      "linear-gradient(90deg, #68b738 " +
+      'linear-gradient(90deg, #68b738 ' +
       gradValue +
-      "%, #ffffff " +
+      '%, #ffffff ' +
       (gradValue + 1) +
-      "%)";
+      '%)';
 
     change.style.background = grad;
   } else {
-    change.style.background = "transparent";
+    change.style.background = 'transparent';
   }
 }
 
-document.body.addEventListener("mousedown", () => {
+document.body.addEventListener('mousedown', () => {
   isActive = true;
 });
 
-document.body.addEventListener("mouseup", () => {
+document.body.addEventListener('mouseup', () => {
   isActive = false;
 });
 
-document.body.addEventListener("mouseleave", () => {
+document.body.addEventListener('mouseleave', () => {
   isActive = false;
 });
 
-document.body.addEventListener("mousemove", (e) => {
+document.body.addEventListener('mousemove', (e) => {
   if (!isActive) {
     return;
   }
@@ -76,13 +76,13 @@ document.body.addEventListener("mousemove", (e) => {
   pauseEvents(e);
 });
 
-beforeButton.addEventListener("click", () => {
+beforeButton.addEventListener('click', () => {
   before.style.width = `${slider.offsetWidth}px`;
   change.value = 0;
   handleSlider(change);
 });
 
-afterButton.addEventListener("click", () => {
+afterButton.addEventListener('click', () => {
   before.style.width = 0;
   change.value = 100;
   handleSlider(change);
@@ -91,11 +91,11 @@ afterButton.addEventListener("click", () => {
 window.onresize = function () {
   if (tabletWidth.matches) {
     change.style.background =
-      "linear-gradient(90deg, transparent 99%, #eaeaea 1%)";
+      'linear-gradient(90deg, transparent 99%, #eaeaea 1%)';
   }
 
   if (desktopWidth.matches) {
     change.style.background =
-      "linear-gradient(90deg,  #f2f2f2 70.5%, transparent 50%)";
+      'transparent';
   }
 };

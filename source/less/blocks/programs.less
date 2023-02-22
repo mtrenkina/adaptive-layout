@@ -33,7 +33,9 @@
     @media @desktop {
       padding: 40px 50px 60px 50px;
       grid-template-columns: 1fr 3fr;
+      grid-template-rows: 1fr 1fr 1fr;
       align-items: center;
+      row-gap: 5px;
     }
   }
 
@@ -48,16 +50,18 @@
     @media @tablet {
       grid-row-start: 2;
       grid-column-start: 2;
-      grid-row: ~"1 / 4";
+      grid-row: ~'1 / 4';
       width: 200px;
       height: 211px;
       background-size: 100% 100%;
     }
 
     @media @desktop {
+      margin-bottom: 35px;
+      margin-left: 3px;
       grid-row-start: 1;
       grid-column-start: 1;
-      grid-row: ~"1 / 3";
+      grid-row: ~'1 / 3';
       width: 100px;
       height: 106px;
       background-size: 100% 100%;
@@ -82,7 +86,7 @@
 
       @media @desktop {
         width: 134px;
-        margin-left: -25px;
+        margin-left: -18px;
       }
     }
   }
@@ -99,21 +103,22 @@
 
     @media @desktop {
       grid-column-start: 2;
-      grid-row: ~"1 / 3";
+      grid-row: ~'1 / 3';
       .mxn-font-style(36px; 36px; @black);
-      padding-left: 30px;
+      padding-left: 38px;
+      padding-bottom: 38px;
     }
   }
 
   &__text {
     .mxn-font-style();
-    grid-column: ~"1 / 3";
+    grid-column: ~'1 / 3';
     font-family: Arial, Helvetica, sans-serif;
 
     @media @tablet {
       grid-row-start: 2;
       grid-column-start: 1;
-      grid-column: ~"1 / 2";
+      grid-column: ~'1 / 2';
       .mxn-font-style(@baseFontSize-tablet; @baseLineHeight-tablet; @black);
       font-family: Arial, Helvetica, sans-serif;
       padding: 0;
@@ -122,9 +127,12 @@
     }
 
     @media @desktop {
+      line-height: 22px;
       grid-row-start: 3;
       grid-column-start: 1;
-      grid-column: ~"1 / 3";
+      grid-column: ~'1 / 3';
+      align-self: flex-start;
+      margin-top: -2px;
     }
   }
 
@@ -135,7 +143,7 @@
     .mxn-font-style(16px; 16px; @black);
     text-transform: uppercase;
     grid-row-start: 3;
-    grid-column: ~"1 / 3";
+    grid-column: ~'1 / 3';
     padding: 20px 20px 0 0;
 
     @media @tablet {
@@ -146,13 +154,13 @@
     @media @desktop {
       .mxn-font-style(20px; 30px; @black);
       grid-row-start: 4;
-      grid-column: ~"1 / 3";
+      grid-column: ~'1 / 3';
       padding-top: 20px;
     }
 
     &::before {
       @media mobile-max {
-        content: "";
+        content: '';
         position: absolute;
         width: 240px;
         height: 1px;
@@ -162,7 +170,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 24px;
       height: 12px;
@@ -183,7 +191,7 @@
     &:hover::after {
       right: -10px;
       width: 33px;
-      background-image: url("../../img/icon_arrow_big.svg");
+      background-image: url('../../img/icon_arrow_big.svg');
     }
 
     &:active {
