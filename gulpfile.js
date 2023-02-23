@@ -65,7 +65,7 @@ export const sprite = () => {
           {
           name: 'removeViewBox',
           parmas: {
-            active: true,
+            active: false,
           }},
           {
             name: 'cleanupIDs',
@@ -74,8 +74,8 @@ export const sprite = () => {
           }}]
       })
     )
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('source'));
+    .pipe(rename('sprite.min.svg'))
+    .pipe(gulp.dest('build'));
 };
 
 // Images
