@@ -1,10 +1,11 @@
 .features {
   position: relative;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 
   @media @tablet {
     padding-right: 110px;
     padding-bottom: 60px;
+    margin-bottom: 0px;
   }
 
   @media (@tablet) and (@tablet-max) {
@@ -13,16 +14,15 @@
 
   @media @desktop {
     padding-bottom: 0px;
-    margin-bottom: 22px;
   }
 
   &__heading {
     .mxn-font-style(36px; 40px; @black);
     padding-bottom: 38px;
 
-    @media @tablet-width {
-      .mxn-font-style(60px; 60px; @black);
-      padding-bottom: 75px;
+    @media @tablet {
+      .mxn-font-style(60px; 50px; @black);
+      padding-bottom: 77px;
     }
 
     @media @desktop {
@@ -40,8 +40,8 @@
     @media @tablet {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      column-gap: 65px;
-      row-gap: 90px;
+      column-gap: 134px;
+      row-gap: 68px;
     }
 
     @media @desktop {
@@ -63,7 +63,7 @@
       font-family: Arial, Helvetica, sans-serif;
       padding-left: 0;
       padding-top: 110px;
-      padding-bottom: 65px;
+      padding-bottom: 67px;
       padding-right: 5px;
       width: 250px;
     }
@@ -98,8 +98,8 @@
         z-index: -1;
         width: 112px;
         height: 232px;
-        right: 50px;
-        top: 0px;
+        right: 53px;
+        top: -3px;
         background-position: right center;
         background-repeat: no-repeat;
       }
@@ -112,6 +112,7 @@
   }
 
   &__item--second {
+
     @media @desktop {
       padding-left: 2px;
     }
@@ -124,6 +125,11 @@
   }
 
   &__item--fourth {
+
+    @media @tablet {
+      padding-right: 5px;
+    }
+
     @media @desktop {
       padding-left: 6px;
       padding-right: 0px;
@@ -163,17 +169,41 @@
     background-image: url(../../img/icon_2.svg);
     width: 132px;
     right: 10px;
+
+    @media @tablet {
+      right: 15px;
+    }
+
+    @media @desktop {
+      right: 10px;
+    }
   }
 
   &__item--third::after {
     background-image: url(../../img/icon_3.svg);
     width: 134px;
     right: 5px;
+
+    @media @tablet {
+      right: 15px;
+    }
+
+    @media @desktop {
+      right: 5px;
+    }
   }
 
   &__item--fourth::after {
     background-image: url(../../img/icon_4.svg);
     width: 136px;
     right: -4px;
+
+    @media @tablet {
+      right: 5px;
+    }
+
+    @media @desktop {
+      right: -4px;
+    }
   }
 }

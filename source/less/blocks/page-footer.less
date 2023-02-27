@@ -1,13 +1,17 @@
 .page-footer {
   background: linear-gradient(to top, @basic_grey 100%, transparent 50%);
 
+  @media @desktop {
+    align-items: center;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 65px 1fr;
     align-items: center;
     justify-items: center;
-    padding: 20px;
+    padding: 13px 10px 20px 10px;
     padding-bottom: 0;
     height: 236px;
     width: 100%;
@@ -17,9 +21,9 @@
       grid-template-rows: 35px;
       height: 150px;
       padding: 0px;
-      width: 708px;
-      margin: 0 auto;
       align-content: center;
+      justify-content: space-between;
+      padding: 0 20px;
     }
     @media @desktop {
       height: 149px;
@@ -34,10 +38,16 @@
 
     @media @tablet {
       justify-self: start;
-      padding-left: 0px;
+      padding-left: 10px;
+    }
+
+    @media @desktop {
+      padding: 0px;
+      padding-top: 4px;
     }
 
     &:hover {
+      padding: 0;
       opacity: 0.8;
     }
 

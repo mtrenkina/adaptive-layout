@@ -1,9 +1,9 @@
 .promo {
   position: relative;
   z-index: 1;
-  min-height: 478px;
+  min-height: 480px;
   text-align: center;
-  padding: 30px 0;
+  padding: 28px 0 0 0;
   display: grid;
 
   @media @mobile-max {
@@ -12,14 +12,13 @@
     background-size: 320px 305px;
     background-position: top center;
     background-repeat: no-repeat;
-    padding-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   @media @tablet {
     grid-template-columns: 80px 2fr 1fr;
     min-height: 552px;
     padding: 0 30px;
-    margin-bottom: 10px;
   }
 
   @media @desktop {
@@ -46,22 +45,28 @@
     @media @tablet {
       .mxn-font-style(60px; 60px; @black);
       text-align: start;
+      padding-left: 5px;
     }
 
     @media @desktop {
+      padding-left: 0px;
     }
   }
 
   &__text {
     .mxn-font-style(14px; 14px; @white);
-    padding: 20px 0 0 0;
+    padding: 22px 0 0 0;
     text-transform: uppercase;
     text-align: center;
 
     @media @tablet {
       .mxn-font-style(20px; 20px; @black);
-      padding: 40px 0 0 0;
+      padding: 42px 0 0 8px;
       text-align: start;
+    }
+
+    @media @desktop {
+      padding-left: 0px;
     }
   }
 
@@ -71,9 +76,7 @@
     @media @tablet {
       grid-column: ~"1 / -1";
       grid-row-start: 2;
-      margin: 0 auto;
-      margin-top: 32px;
-      padding-right: 40px;
+      margin-top: 20px;
     }
 
     @media @desktop {
@@ -90,8 +93,8 @@
     height: 270px;
 
     @media @tablet {
-      width: 609px;
-      height: auto;
+      width: 100%;
+      height: 100%;
     }
 
     @media @desktop {
@@ -101,11 +104,12 @@
   }
 
   & .button {
-    margin: 0 auto;
+    justify-self: center;
 
     @media @tablet {
-      margin: 0;
+      justify-self: start;
       margin-top: 50px;
+      margin-left: 7px;
       grid-column-start: 2;
       grid-row-start: 2;
     }

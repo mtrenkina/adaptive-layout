@@ -1,9 +1,21 @@
 .page-header {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: @white;
   color: @black;
   width: 100%;
+  min-height: 66px;
+
+  @media @tablet {
+    min-height: 108px;
+    margin-bottom: 30px;
+  }
+
+  @media @desktop {
+    margin-bottom: -7px;
+  }
 
   &__logo {
     &:hover {
@@ -13,10 +25,14 @@
     &:active {
       opacity: 0.6;
     }
+
+    @media @tablet {
+      padding-bottom: 3px;
+    }
   }
 
   &__logo-mobile {
-    margin-left: 55px;
+    margin-left: 53px;
     margin-bottom: 8px;
 
     @media @tablet {
