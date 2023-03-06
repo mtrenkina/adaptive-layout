@@ -12,7 +12,7 @@
   }
 
   @media @desktop {
-    padding-top: 48px;
+    padding-top: 90px;
     padding-bottom: 28px;
   }
 
@@ -21,7 +21,7 @@
       content: "";
       position: absolute;
       z-index: -1;
-      top: 0;
+      top: 43px;
       left: 610px;
       width: 720px;
       height: 695px;
@@ -54,7 +54,8 @@
   }
 
   @media @desktop {
-    width: 478px;
+    padding-left: 20px;
+    width: 500px;
   }
 }
 
@@ -86,11 +87,17 @@
   }
 }
 
+.main-nav--opened {
+  @media @mobile-max {
+    padding-top: 13px;
+  }
+}
+
 .main-nav--opened .main-nav__toogle::before,
 .main-nav--opened .main-nav__toogle::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 27px;
   right: 0;
   width: 24px;
   height: 1.5px;

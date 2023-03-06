@@ -2,17 +2,21 @@
   @media @desktop {
     grid-row-start: 4;
     grid-column: ~"1 / 3";
+    padding-bottom: 5px;
   }
 
   &__heading {
+
+    margin-bottom: 34px;
+
     @media @tablet {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     &::after {
       content: "";
       position: absolute;
-      width: 136px;
+      width: 135px;
       height: 2px;
       top: 15px;
       right: -159px;
@@ -28,7 +32,7 @@
       @media @desktop {
         width: 1078px;
         height: 2px;
-        top: 20px;
+        top: 22px;
         right: -1118px;
       }
     }
@@ -61,7 +65,7 @@
     @media @tablet {
       grid-template-columns: 1fr 1fr;
       row-gap: 30px;
-      column-gap: 70px;
+      column-gap: 65px;
       margin-bottom: 54px;
     }
 

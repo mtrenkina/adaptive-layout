@@ -1,13 +1,14 @@
 .parameters-list {
   display: grid;
-  row-gap: 20px;
+  position: relative;
+  row-gap: 13px;
   padding-bottom: 20px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid @grey-border;
+  margin-bottom: 20px;
 
   @media @tablet {
     border: none;
     margin-bottom: 50px;
+    row-gap: 20px;
   }
 
   &__item {
@@ -17,10 +18,24 @@
   }
 
   &__label {
-    margin-right: 12px;
+    margin-right: 14px;
 
     @media @tablet {
       .mxn-font-style(20px; 20px);
+      margin-right: 20px;
+    }
+  }
+
+  &::after {
+
+    @media @mobile-max {
+      content: "";
+      position: absolute;
+      top: 187px;
+      left: -20px;
+      width: 320px;
+      height: 1px;
+      background-color: @grey-border;
     }
   }
 }

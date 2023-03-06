@@ -1,16 +1,33 @@
 .form-programs {
   padding-bottom: 20px;
-  margin-bottom: 25px;
-  border-bottom: 1px solid @grey-border;
+  margin-bottom: 28px;
+  position: relative;
 
   @media @tablet {
     padding: 24px 28px;
     border: 1px solid @input_grey;
-    margin-bottom: 80px;
+    margin-bottom: 78px;
+  }
+
+  @media @desktop {
+    margin-bottom: 70px;
   }
 
   &__list {
     display: grid;
     row-gap: 13px;
+  }
+
+  &::after {
+
+    @media @mobile-max {
+    content: "";
+    position: absolute;
+    top: 136px;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    background-color: @grey-border;
+    }
   }
 }

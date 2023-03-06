@@ -1,7 +1,8 @@
 .form {
   &__wrapper {
     padding: 0 20px;
-    margin-bottom: 35px;
+    margin-bottom: 31px;
+
     @media @tablet {
       padding: 0 69px;
       margin-bottom: 72px;
@@ -12,6 +13,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 80px;
+      margin-bottom: 83px;
     }
   }
 
@@ -38,7 +40,7 @@
     box-sizing: border-box;
     padding: 12px 15px;
     min-height: 45px;
-    border: 1px solid @input_grey;
+    border: 2px solid @input_grey;
     .mxn-font-style(16px; 18px);
     text-transform: uppercase;
     outline: none;
@@ -52,7 +54,7 @@
   }
 
   &__input:invalid {
-    border: 1px solid @status_error;
+    border: 2px solid @status_error;
 
     & ~ .form__image {
       color: @status_error;
@@ -60,7 +62,7 @@
   }
 
   &__input:hover {
-    border: 1px solid @special_grey;
+    border: 2px solid @special_grey;
 
     & ~ .form__image {
       color: @special_dark-grey-2;
@@ -68,7 +70,7 @@
   }
 
   &__input:focus {
-    border: 1px solid @special_dark-grey;
+    border: 2px solid @special_dark-grey;
 
     & ~ .form__image {
       color: @special_dark-grey-2;
@@ -87,8 +89,8 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 12px;
-    right: 10px;
+    top: 14px;
+    right: 15px;
 
     @media @tablet {
       top: 15px;
@@ -96,8 +98,11 @@
     }
 
     &--phone {
-      right: 8px;
+      top: 13px;
+      right: 13px;
+
       @media @tablet {
+        top: 15px;
         right: 15px;
       }
     }
@@ -106,7 +111,7 @@
   &__textarea {
     width: 280px;
     height: 150px;
-    border: 1px solid @input_grey;
+    border: 2px solid @input_grey;
     .mxn-font-style(16px; 18px);
     text-transform: uppercase;
     outline: none;
@@ -117,6 +122,8 @@
       width: 631px;
       height: 174px;
       .mxn-font-style(20px; 30px);
+      padding-top: 10px;
+      padding-left: 18px;
     }
 
     @media @desktop {
@@ -125,11 +132,12 @@
   }
 
   &__submit {
+
     @media @tablet {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: baseline;
-      column-gap: 60px;
+      column-gap: 55px;
     }
 
     @media @desktop {
@@ -139,10 +147,13 @@
   }
 
   &__button {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+    .mxn-font-style(16px; 16px; white);
 
     @media @tablet {
       width: 282px;
+      margin-bottom: 0px;
+      .mxn-font-style(20px; 20px; white);
     }
 
     @media @desktop {
@@ -151,14 +162,19 @@
   }
 
   &__notification {
-    .mxn-font-style(16px; 18px; black);
+    .mxn-font-style(14px; 16px; black);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+
     @media @tablet {
       .mxn-font-style(16px; 16px; black);
       font-family: Arial, Helvetica, sans-serif;
       padding-left: 5px;
+      align-self: center;
       text-align: start;
+    }
+    @media @desktop {
+      padding-left: 18px;
     }
   }
 }

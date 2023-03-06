@@ -1,9 +1,9 @@
 .form-contacts {
   padding-bottom: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 
   @media @tablet {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 
   @media @desktop {
@@ -12,6 +12,11 @@
   }
 
   &__heading {
+
+    @media @tablet {
+      margin-bottom: 58px;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -60,6 +65,10 @@
     display: grid;
     row-gap: 15px;
 
+    @media @tablet {
+      row-gap: 20px;
+    }
+
     @media @desktop {
       grid-template-columns: 1fr 1fr;
       column-gap: 80px;
@@ -75,6 +84,10 @@
 
   &__label {
     margin-right: 10px;
+
+    @media @tablet {
+      margin-right: 17px;
+    }
   }
 
   &__input {
